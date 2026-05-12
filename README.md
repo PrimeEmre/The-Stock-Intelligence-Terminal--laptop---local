@@ -186,8 +186,4 @@ CACHE_DURATION=3600
 
 This tool is for **educational and informational purposes only**. It is **NOT financial advice**. Always do your own research and consult with a licensed financial advisor before making investment decisions. The authors assume no liability for any trading losses or financial decisions made using this software.
 
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+# 📄 License
