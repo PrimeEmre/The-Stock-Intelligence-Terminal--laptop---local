@@ -11,6 +11,7 @@ from duckduckgo_search import DDGS
 from concurrent.futures import ThreadPoolExecutor
 from flask import Flask, render_template, request, jsonify, session
 import subprocess
+from flask import send_from_directory
 
 load_dotenv(override=True)
 
@@ -85,6 +86,16 @@ Format:
 
 Keep total response under 300 words. Use plain text with minimal markdown."""
 
+
+
+# ── ICONS / FAVICON ────────────────────────────────────────────
+@app.route('/icons/<path:filename>')
+def icons(filename):
+    return send_from_directory('icons', filename)
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory('icons', 'favicon.ico')
 
 # ── HELPERS ────────────────────────────────────────────────────
 def suggest_ticker(raw: str) -> str | None:
